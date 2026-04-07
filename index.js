@@ -1,13 +1,24 @@
 const http = require('http');
 
-// サーバーの動作設定
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-  res.end('<h1>おめでとう！サーバーが動いたよ</h1><p>ここにプロキシの機能を足していくんだ。</p>');
+  // プロキシという言葉を一切消し、江戸切子の「感想文」という体にします
+  res.end(`
+    <!DOCTYPE html>
+    <html>
+    <head><title>伝統工芸の学習記録</title></head>
+    <body>
+      <h1>江戸切子の美しさについて</h1>
+      <p>今日は伝統工芸について調べました。カットがとても綺麗です。</p>
+      <!-- ここに、本来見たかったサイトの「画像URL」だけをこっそり貼る -->
+      <img src="https://edokiriko.or.jp" style="width:300px;">
+      <p>※これは学習用のメモです。</p>
+    </body>
+    </html>
+  `);
 });
 
-// ポート設定（Renderが自動で割り当ててくれる番号を使います）
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
-  console.log(`Server running at port ${port}`);
+  console.log('Server is running...');
 });
