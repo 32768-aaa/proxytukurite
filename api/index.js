@@ -9,7 +9,7 @@ export default function handler(req, res) {
       <p>今日は伝統工芸について調べました。カットがとても綺麗です。</p>
       
       <!-- 画像の「直URL」に修正しました -->
-      <img src="https://edokiriko.or.jp" style="width:300px;">
+      <img src="https://edokiriko.or.jp/images/home/head-showroom2.jpg" style="width:300px;">
       
       <p>※これは学習用のメモです。</p>
     </body>
